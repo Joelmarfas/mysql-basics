@@ -42,3 +42,21 @@ INSERT INTO salaries VALUES
 (14,18000,'2019-12-16', CURDATE()),
 (15,24000,'2020-11-17', '2021-11-17'),
 (15,27000,'2021-11-17', CURDATE());
+
+
+-- DEPARTMENTS
+
+INSERT INTO departments VALUES 
+('1','Tech'),
+('2','Marketing'),
+('3','Finance'),
+('4','Legal'),
+('5','Sales');
+
+-- DEPT MANAGERS
+INSERT INTO dept_manager VALUES 
+(2, "1", '2021-10-01', CURDATE()),
+(3, "2", '2015-10-01', CURDATE()),
+(4, "3", '2019-10-01', CURDATE()),
+(5, "4", '2016-09-01', CURDATE()),
+(15, "5", '2021-11-17', CURDATE());
