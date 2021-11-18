@@ -110,4 +110,30 @@ INSERT INTO dept_emp VALUES
 (15, '3' , '2021-11-17', CURDATE());
 
 
+-- UPDATE DATA
 
+-- UPDATE EMPLOYEES
+
+UPDATE `employees` SET `birth_date`='1997-05-23',`first_name`='Cambiada',`last_name`='YanoesLaura' WHERE emp_no = 7;
+
+
+-- UPDATE DEPARTMENTS
+
+UPDATE departments SET dept_name = "Tech 2.0" WHERE dept_no = 1;
+UPDATE departments SET dept_name = "Marketing 2.0" WHERE dept_no = 2;
+UPDATE departments SET dept_name = "Finance 2.0" WHERE dept_no = 3;
+UPDATE departments SET dept_name = "Legal 2.0" WHERE dept_no = 4;
+UPDATE departments SET dept_name = "Sales 2.0" WHERE dept_no = 5;
+
+
+-- GET DATA
+
+-- Select all employees with a salary greater than 20,000
+SELECT * FROM employees WHERE emp_no IN(SELECT emp_no FROM salaries WHERE salary > 20000);
+--Select all employees with a salary below 10,000
+SELECT * FROM employees WHERE emp_no IN(SELECT emp_no FROM salaries WHERE salary < 10000);
+--Select all employees who have a salary between 14.00 and 50,000
+SELECT * FROM employees WHERE emp_no IN(SELECT emp_no FROM salaries WHERE salary  BETWEEN 14000 AND 50000);
+--Select the total number of employees
+SELECT COUNT(emp_no) AS NumberOfEmployees FROM employees;
+--Select the total number of employees who have worked in more than one department
